@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product - TechStore</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; 
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  padding: 15px 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #00cfff;
+}
+
+.page-title {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 2rem;
+  color: #333;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px 50px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  color: #555;
+  min-height: 50px;
+}
+
+.price {
+  display: block;
+  font-weight: bold;
+  color: #28a745;
+  margin: 10px 0;
+}
+
+.btn-success {
+  display: inline-block;
+  padding: 10px 20px; 
+  font-size: 0.95rem; 
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.25s ease-in-out;
+  color: white;
+  background: #2980b9;
+  border: none;
+}
+
+.btn-success:hover {
+  background: #219150;
+}
+/* Footer */
+.footer {
+  background: linear-gradient(90deg, #2c5364, #203a43, #0f2027);
+  color: #fff;
+  text-align: center;
+  padding: 25px 10px;
+  margin-top: 50px;
+}
+
+.footer a {
+  color: #00cfff;
+  margin: 0 8px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <h1 class="logo">TechStore</h1>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="products.html" class="active">Produk</a></li>
+          <li><a href="about.html">Tentang Kami</a></li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Daftar Produk -->
+  <main class="container">
+    <h1 class="page-title">Daftar Produk TechStore</h1>
+    <div class="product-grid">
+      <!-- Produk 1 -->
+      <div class="product-card">
+        <img src="assets/laptop1.jpg" alt="Laptop Gaming ROG">
+        <h3>Laptop Gaming ROG</h3>
+        <p>Prosesor Intel i7, RTX 4060, layar 144Hz.</p>
+        <span class="price">Rp 18.500.000</span>
+        <button class="btn-success">Beli Sekarang</button>
+      </div>
+      <!-- Produk 2 -->
+      <div class="product-card">
+        <img src="assets/smartphone1.jpg" alt="Smartphone Flagship">
+        <h3>Smartphone Flagship</h3>
+        <p>Kamera 200MP, Snapdragon terbaru, baterai 5000mAh.</p>
+        <span class="price">Rp 12.999.000</span>
+        <button class="btn-success">Beli Sekarang</button>
+      </div>
+      <!-- Produk 3 -->
+      <div class="product-card">
+        <img src="assets/headphone.jpg" alt="Wireless Headphones">
+        <h3>Wireless Headphones</h3>
+        <p>Noise cancelling, Hi-Fi audio, baterai tahan 30 jam.</p>
+        <span class="price">Rp 2.250.000</span>
+        <button class="btn-success">Beli Sekarang</button>
+      </div>
+      <!-- Produk 4 -->
+      <div class="product-card">
+        <img src="assets/tablet.jpg" alt="Tablet Pro X">
+        <h3>Tablet Pro X</h3>
+        <p>Layar 11” AMOLED, stylus support, RAM 8GB.</p>
+        <span class="price">Rp 8.499.000</span>
+        <button class="btn-success">Beli Sekarang</button>
+      </div>
+      <!-- Produk 5 -->
+      <div class="product-card">
+        <img src="assets/smartwatch.jpg" alt="Smartwatch Ultra">
+        <h3>Smartwatch Ultra</h3>
+        <p>Sensor kesehatan lengkap, tahan air 50m.</p>
+        <span class="price">Rp 3.499.000</span>
+        <button class="btn-success">Beli Sekarang</button>
+      </div>
+      <!-- Produk 6 -->
+      <div class="product-card">
+        <img src="assets/keyboard.jpg" alt="Mechanical Keyboard">
+        <h3>Mechanical Keyboard</h3>
+        <p>Switch Blue/Red, RGB, full-size.</p>
+        <span class="price">Rp 1.250.000</span>
+        <button class="btn-success">Beli Sekarang</button>
+      </div>
+      <!-- Produk 7 -->
+      <div class="product-card">
+        <img src="assets/mouse.jpg" alt="Gaming Mouse">
+        <h3>Gaming Mouse</h3>
+        <p>Sensor 16000 DPI, RGB, 7 tombol.</p>
+        <span class="price">Rp 750.000</span>
+        <button class="btn-success">Beli Sekarang</button>
+      </div>
+      <!-- Produk 8 -->
+      <div class="product-card">
+        <img src="assets/monitor.jpg" alt="Monitor 27 4K">
+        <h3>Monitor 27” 4K</h3>
+        <p>Panel IPS, refresh rate 144Hz.</p>
+        <span class="price">Rp 6.799.000</span>
+        <button class="btn-success">Beli Sekarang</button>
+      </div>
+      <!-- Produk 9 -->
+      <div class="product-card">
+        <img src="assets/printer.jpg" alt="Printer Wireless">
+        <h3>Printer Wireless</h3>
+        <p>Print, scan, copy, koneksi WiFi.</p>
+        <span class="price">Rp 2.399.000</span>
+        <button class="btn-success">Beli Sekarang</button>
+      </div>
+      <!-- Produk 10 -->
+      <div class="product-card">
+        <img src="assets/router.jpg" alt="Router WiFi 6">
+        <h3>Router WiFi 6</h3>
+        <p>Kecepatan hingga 3000 Mbps, dual band.</p>
+        <span class="price">Rp 1.699.000</span>
+        <button class="btn-success">Beli Sekarang</button>
+      </div>
+      <!-- Produk 11 -->
+      <div class="product-card">
+        <img src="assets/powerbank.jpg" alt="Powerbank 30.000mAh">
+        <h3>Powerbank 30.000mAh</h3>
+        <p>Fast charging PD 65W, 3 port USB-C.</p>
+        <span class="price">Rp 1.099.000</span>
+        <button class="btn-success">Beli Sekarang</button>
+      </div>
+      <!-- Produk 12 -->
+      <div class="product-card">
+        <img src="assets/speaker.jpg" alt="Bluetooth Speaker">
+        <h3>Bluetooth Speaker</h3>
+        <p>Suara bass kuat, baterai tahan 24 jam.</p>
+        <span class="price">Rp 899.000</span>
+        <button class="btn-success">Beli Sekarang</button>
+      </div>
+      <!-- Produk 13 -->
+      <div class="product-card">
+        <img src="assets/camera.jpg" alt="Kamera Mirrorless">
+        <h3>Kamera Mirrorless</h3>
+        <p>Resolusi 24MP, lensa kit 16-50mm.</p>
+        <span class="price">Rp 11.499.000</span>
+        <button class="btn-success">Beli Sekarang</button>
+      </div>
+      <!-- Produk 14 -->
+      <div class="product-card">
+        <img src="assets/drone.jpg" alt="Drone Pro">
+        <h3>Drone Pro</h3>
+        <p>Kamera 4K, GPS, waktu terbang 40 menit.</p>
+        <span class="price">Rp 9.999.000</span>
+        <button class="btn-success">Beli Sekarang</button>
+      </div>
+      <!-- Produk 15 -->
+      <div class="product-card">
+        <img src="assets/ssd.jpg" alt="SSD NVMe 1TB">
+        <h3>SSD NVMe 1TB</h3>
+        <p>Kecepatan baca 3500MB/s, tulis 3000MB/s.</p>
+        <span class="price">Rp 1.799.000</span>
+        <button class="btn-success">Beli Sekarang</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+       <div class="container">
+           <p>&copy; 2025 TechStore. Hak Cipta Dilindungi.</p>
+           <p>
+               <a href="#">Facebook</a>
+               <a href="#">Instagram</a>
+               <a href="#">Twitter</a>
+               <a href="#">YouTube</a>
+           </p>
+       </div>
+   </footer>
+</body>
+</html>
