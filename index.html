@@ -4,7 +4,274 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>TechStore - Toko Elektronik Online Terpercaya</title>
-   <link rel="stylesheet" href="style.sss">
+    <style>
+        /* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f7f9fc;
+}
+
+/* Container umum */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.contact-info {
+  font-size: 14px;
+}
+
+/* Navbar */
+.navbar {
+  background: #fff;
+  border-bottom: 2px solid #eaeaea;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  padding: 15px 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar a:hover,
+.navbar .promo {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* Layout utama */
+.main-content {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Konten utama */
+.content {
+  flex: 3;
+}
+
+.hero {
+  background: linear-gradient(120deg, #2c5364, #203a43, #0f2027);
+  color: #fff;
+  padding: 60px 30px;
+  border-radius: 12px;
+  text-align: center;
+  position: relative; /* biar nggak ikut scroll */
+}
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: #3498db;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #2980b9;
+}
+
+.btn-success {
+  background: #27ae60;
+}
+
+.btn-success:hover {
+  background: #219150;
+}
+
+/* Produk */
+.products-section h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  max-width: 100px;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.price {
+  font-weight: bold;
+  color: #e74c3c;
+  margin: 10px 0;
+}
+
+/* Features */
+.features {
+  background: #fff;
+  padding: 30px;
+  margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.features h2 {
+  margin-bottom: 15px;
+}
+
+.features ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+/* Testimonials */
+.testimonials {
+  margin-top: 40px;
+}
+
+.testimonials h2 {
+  margin-bottom: 20px;
+}
+
+.testimonial {
+  background: #fff;
+  border-left: 5px solid #3498db;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.author {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 1;
+}
+
+.sidebar-section {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.sidebar-section h3 {
+  margin-bottom: 10px;
+}
+
+.promo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e74c3c;
+  margin: 10px 0;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(90deg, #2c5364, #203a43, #0f2027);
+  color: #fff;
+  text-align: center;
+  padding: 25px 10px;
+  margin-top: 50px;
+}
+
+.footer a {
+  color: #00cfff;
+  margin: 0 8px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+/* Responsif */
+@media (max-width: 900px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .sidebar {
+    order: -1;
+  }
+}
+    </style>
 </head>
 <body>
    <header class="header">
@@ -22,7 +289,7 @@
            <ul>
                <li><a href="#home">Home</a></li>
                <li><a href="#produk">Produk</a></li>
-               <li><a href="#tentang">Tentang Kami</a></li>
+               <li><a href="about.html">Tentang Kami</a></li>
                <li><a href="#kontak">Kontak</a></li>
                <li><a href="#promo" class="promo">🔥 Promo Spesial</a></li>
            </ul>
@@ -45,7 +312,7 @@
                   
                    <div class="products-grid">
                        <article class="product-card clearfix">
-                           <img src="https://via.placeholder.com/120x120/3498db/ffffff?text=💻" alt="Laptop Gaming" class="product-image">
+                           <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//98/MTA-50454529/asus_laptop_asus_rog_strix_-_g__g513ic_-_r73587g_-o11_9reyzen7-4800h-8gb-512gb-rtx3050-4gb-fhd15-6--wind11-ohs-_full01_r8wdazvr.jpg" alt="Laptop Gaming" class="product-image">
                            <h3>Laptop Gaming ROG</h3>
                            <p>Laptop gaming performa tinggi dengan processor Intel i7 dan VGA RTX 4060 untuk pengalaman gaming terbaik.</p>
                            <div class="price">Rp 18.500.000</div>
@@ -54,7 +321,7 @@
 
 
                        <article class="product-card clearfix">
-                           <img src="https://via.placeholder.com/120x120/27ae60/ffffff?text=📱" alt="Smartphone" class="product-image">
+                           <img src="data:image/jpeg;base64,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" alt="Smartphone" class="product-image">
                            <h3>Smartphone Flagship</h3>
                            <p>Smartphone premium dengan kamera 200MP, chipset Snapdragon terbaru, dan baterai 5000mAh fast charging.</p>
                            <div class="price">Rp 12.999.000</div>
@@ -63,7 +330,7 @@
 
 
                        <article class="product-card clearfix">
-                           <img src="https://via.placeholder.com/120x120/e74c3c/ffffff?text=🎧" alt="Headphone" class="product-image">
+                           <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,f_auto,q_auto:best,w_640/v1634025439/01k35reqn6q62t3k4pxj2jf87v.png" alt="Headphone" class="product-image">
                            <h3>Wireless Headphones</h3>
                            <p>Headphone wireless dengan teknologi noise cancelling dan kualitas audio Hi-Fi untuk pengalaman mendengar optimal.</p>
                            <div class="price">Rp 2.250.000</div>
@@ -130,7 +397,7 @@
 
    <footer class="footer">
        <div class="container">
-           <p>&copy; 2024 TechStore. Hak Cipta Dilindungi.</p>
+           <p>&copy; 2025 TechStore. Hak Cipta Dilindungi.</p>
            <p>
                <a href="#">Facebook</a>
                <a href="#">Instagram</a>
@@ -163,16 +430,6 @@
            });
        });
 
-
-       // Simple animation on scroll
-       window.addEventListener('scroll', function() {
-           const scrolled = window.pageYOffset;
-           const parallax = document.querySelector('.hero');
-           if (parallax) {
-               const speed = scrolled * 0.5;
-               parallax.style.transform = `translateY(${speed}px)`;
-           }
-       });
    </script>
 </body>
 </html>
