@@ -93,4 +93,4 @@
 
 ---
 
-_Disiapkan oleh: Orang 1 (Auditor & Repo Manager)_
+_Disiapkan oleh: Lexx (Auditor & Repo Manager)_
