@@ -4,32 +4,24 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>TechStore - Toko Elektronik Online Terpercaya</title>
-   <link rel="stylesheet" href="style.sss">
+   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-   <header class="header">
-       <div class="container">
-           <div class="logo">🛒 TechStore</div>
-           <div class="contact-info">
-               📞 (021) 1234-5678 | 📧 info@techstore.com
-           </div>
-       </div>
-   </header>
-
-
-   <nav class="navbar">
-       <div class="container">
-           <ul>
-               <li><a href="#home">Home</a></li>
-               <li><a href="#produk">Produk</a></li>
-               <li><a href="#tentang">Tentang Kami</a></li>
-               <li><a href="#kontak">Kontak</a></li>
-               <li><a href="#promo" class="promo">🔥 Promo Spesial</a></li>
-           </ul>
-       </div>
-   </nav>
-
-
+   <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <h1 class="logo">TechStore</h1>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Beranda</a></li>
+          <li><a href="product.html">Produk</a></li>
+          <li><a href="about.html">Tentang Kami</a></li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
    <div class="container">
        <div class="main-content">
            <main class="content">
@@ -130,7 +122,7 @@
 
    <footer class="footer">
        <div class="container">
-           <p>&copy; 2024 TechStore. Hak Cipta Dilindungi.</p>
+           <p>&copy; 2025 TechStore. Hak Cipta Dilindungi.</p>
            <p>
                <a href="#">Facebook</a>
                <a href="#">Instagram</a>
@@ -161,17 +153,6 @@
            button.addEventListener('click', function() {
                alert('Terima kasih! Fitur keranjang belanja akan segera hadir.');
            });
-       });
-
-
-       // Simple animation on scroll
-       window.addEventListener('scroll', function() {
-           const scrolled = window.pageYOffset;
-           const parallax = document.querySelector('.hero');
-           if (parallax) {
-               const speed = scrolled * 0.5;
-               parallax.style.transform = `translateY(${speed}px)`;
-           }
        });
    </script>
 </body>

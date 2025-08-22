@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About us - TechStore</title>
+  <style>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; 
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  display: flex;
+  flex-direction: column; 
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  padding: 15px 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #00cfff;
+}
+
+/* About Section */
+.about {
+  flex: 1;
+  padding: 50px 0;
+  background: #f9f9f9;
+}
+
+.about .container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #203a43;
+}
+
+.about p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(90deg, #2c5364, #203a43, #0f2027);
+  color: #fff;
+  text-align: center;
+  padding: 25px 10px;
+  margin-top: 50px;
+}
+
+.footer a {
+  color: #00cfff;
+  margin: 0 8px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <h1 class="logo">TechStore</h1>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="product.html">Produk</a></li>
+          <li><a href="about.html" class="active">Tentang Kami</a></li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="container">
+      <h2>Tentang TechStore</h2>
+      <p>
+        Selamat datang di <strong>TechStore</strong> – destinasi terpercaya Anda untuk
+        gadget terbaru, aksesoris, dan solusi teknologi. Kami hadir untuk membuat
+        teknologi lebih mudah diakses oleh semua orang.
+      </p>
+      <p>
+        Misi kami adalah memberikan produk berkualitas tinggi dengan layanan terbaik.
+        Baik Anda seorang pelajar, profesional, maupun pecinta teknologi, TechStore
+        siap menjadi pilihan utama Anda.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+       <div class="container">
+           <p>&copy; 2025 TechStore. Hak Cipta Dilindungi.</p>
+           <p>
+               <a href="#">Facebook</a>
+               <a href="#">Instagram</a>
+               <a href="#">Twitter</a>
+               <a href="#">YouTube</a>
+           </p>
+       </div>
+   </footer>
+</body>
+</html>
